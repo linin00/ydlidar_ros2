@@ -32,4 +32,7 @@ IF (WIN32)
 target_link_libraries(ydlidar_driver setupapi Winmm)
 ELSE()
 target_link_libraries(ydlidar_driver rt pthread)
-ENDIF()                    
+ENDIF()         
+
+install(TARGETS ydlidar_driver DESTINATION lib/${PROJECT_NAME})
+install(DIRECTORY include DESTINATION include/${PROJECT_NAME})
